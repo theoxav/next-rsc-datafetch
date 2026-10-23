@@ -10,7 +10,7 @@
     "postlint": "node scripts/lint-success.js",
     "format": "prettier . --check",
     "format:fix": "prettier . --write",
-    "json-server": "json-server --watch ./src/db/db.json --port 4000"
+    "json-server": "json-server --watch ./src/db/db.json --port 8000"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
