@@ -1,4 +1,5 @@
 // 🐶 importe le composant ModeToggle  '@/components/theme-toggle'
+import {ModeToggle} from '@/components/theme-toggle'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -26,6 +27,7 @@ export default function Home() {
             />
           </Link>
           {/* 🐶 Ajouter le composant ModeToggle */}
+          <ModeToggle />
         </div>
       </div>
 

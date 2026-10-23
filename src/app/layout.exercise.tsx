@@ -4,7 +4,7 @@ import {Inter as FontSans} from 'next/font/google'
 import './globals.css'
 // 🐶 importe `ThemeProvider` et `cn`
 // 🤖
-// import {ThemeProvider} from '@/components/theme-provider'
+import {ThemeProvider} from '@/components/theme-provider'
 // import {cn} from '@/lib/utils'
 
 const fontSans = FontSans({
@@ -24,16 +24,17 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={fontSans.variable}>
-        {/* 🐶 wrap {children} du theme provider  
+        {/* 🐶 wrap {children} du theme provider  */}
         <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem
-            disableTransitionOnChange
-          > */}
-        {children}
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )
